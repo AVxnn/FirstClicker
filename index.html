@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер типо minecrafta</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <main class="fullblock container justify-content-center border border-secondary">
+        <header>
+            <div class="headerblock bg-light">
+                <div class="navbar navbar-light bg-light">
+                    <h2 class="headertext ">Кликер</h2>
+                    <h2 class="dollor d-flex justify-content-end text-success">$ <span class="dollorchange">0</span></h2>
+                </div>
+            </div>
+            <section class="infogame navbar navbar-light bg-light">
+                <h2>К/C <span class="ks">1</span></h2>
+                <h2>AК/C <span class="aks">0</span></h2>
+            </section>
+            <h2 class="lvltext text-center bg-light">Lvl <span class="lvltextchange">0</span></h2>
+            <div class="progress bg-light">
+                    <div class="progress-bar progress-bar-striped progress-bar "style="width: 0%"></div>
+            </div>
+            
+            <div class="buttonclick btn btn-warning d-flex justify-content-center" style="height: 100px; padding-top: 24px; font-size: 32px;" onclick="runGame()">Клик</div>
+        </header>
+        <h1 class="shoptext d-flex justify-content-center " >Магазин</h1>
+        <section class="shop  d-flex justify-content-between">
+            
+            <div class="onelistshop">
+                <h3 class="clicktext text-center">Клики</h3>
+                <ul class="listul text-white d-flex flex-column">
+                    <li class="listli ">
+                        <button class="buttonshopone btn btn-success" onkeydown="return checkPhoneKey(event.key)" onclick="buttonShop('buttonshopone', 'textshopone')" value="1">+1</button>
+                        <p class="textshop text-primary">$ <span class="textshopone">200</span></p>
+                    </li>
+                    <li class="listli ">
+                        <button class="buttonshoptwo btn btn-success" onclick="buttonShop('buttonshoptwo', 'textshoptwo')" value="10">+10</button>
+                        <p class="textshop text-primary">$ <span class="textshoptwo"">2000</span></p>
+                    </li>
+                    <li class="listli ">
+                        <button class="buttonshopthire btn btn-success" onclick="buttonShop('buttonshopthire', 'textshopthire')" value="100">+100</button>
+                        <p class="textshop text-primary">$ <span class="textshopthire">20000</span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="twolistshop">
+                <h3 class="clicktext text-center">Прочее</h3>
+                <ul class="listul text-white d-flex flex-column">
+                    <li class="listli ">
+                        <button class="buttonshopfried btn btn-success" onclick="buttonShopAuto('buttonshopfried', 'textshopfried')">Автоклики + 10</button>
+                        <p class="textshop text-primary">$ <span class="textshopfried">2000</span></p>
+                    </li>
+                    <li class="listli ">
+                        <button class="buttonshopfive btn btn-success" onclick="buttonShopLvl()">Купить лвл + 1</button>
+                        <p class="textshop text-primary">$ <span class="textshopfive">20000</span></p>
+                    </li>
+                    <li class="listli ">
+                        <button class="buttonshopsix btn btn-success" onclick="buttonShopColor()">Поменять цвет ‘Клика’</button>
+                        <p class="textshop text-primary">$ <span class="textshopsix">20000</span></p>
+                        
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <footer class="information">
+            <div class="infomain d-flex flex-column text-center">
+                <h1 class="infotext">Статистика</h1>
+                <h5 class="infotextlist">Кликов в секунду - <span class="clicksecond">1</span></h5>
+                <h5 class="infotextlist">Автокликов в секунду - <span class="autoclicksecond">0</span></h5>
+                <h5 class="infotextlist">Всего нажато на ‘Клик’ - <span class="allClick">0</span></h5>
+                <h5 class="infotextlist">Всего заработано - <span class="allautoclicker">0</span></h5>
+                <h5 class="infotextlist">Всего купленно товаров в магазине - <span class="allBuy">0</span></h5>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
