@@ -2,4 +2,4 @@
 
 ### Переход на мой сайт кликер
 
->  https://avxnn.github.io/vxnnn/
+>  https://avxnn.github.io/FirstClicker/.
